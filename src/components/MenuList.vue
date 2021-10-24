@@ -1,8 +1,8 @@
 <template>
   <div class="menu-list mt-10">
     <template>
-      <v-card elevation="2" outlined tile class="pb-2" v-for="(date, dateIndex) in weeklyMenus" :key="dateIndex">
-        <v-card-title class="text--secondary text-subtitle-1 pb-0">{{ date.date }}</v-card-title>
+      <v-card elevation="2" outlined tile class="pb-2 mt-1" v-for="(date, dateIndex) in weeklyMenus" :key="dateIndex">
+        <v-card-title class="text--secondary text-subtitle-2 pb-0">{{ date.date }}</v-card-title>
         <v-card-text class="d-flex flex-column justify-center flex-xs-wrap flex-sm-wrap">
           <ValidationObserver v-slot="{ handleSubmit, invalid }">
             <v-form
