@@ -8,7 +8,7 @@
             <ValidationProvider class="form-field" name="名前" rules="required" v-slot="{ valid }">
               <v-text-field autocomplete="off" v-model="name" label="名前" required :success="valid" />
             </ValidationProvider>
-            <v-btn class="info" id="submit" type="submit" :disabled="invalid">追加</v-btn>
+            <v-btn class="success" id="submit" type="submit" :disabled="invalid">追加</v-btn>
           </v-form>
         </ValidationObserver>
 
@@ -18,7 +18,7 @@
             <v-btn class="error ml-auto" @click="deleteFridge(index)">削除</v-btn>
           </li>
         </ul>
-        <v-btn @click="addCheckedItemsToFridge" class="info" v-if="checkedItems.length">冷蔵庫在庫に追加</v-btn>
+        <v-btn @click="addCheckedItemsToFridge" class="success" v-if="checkedItems.length">冷蔵庫在庫に追加</v-btn>
       </v-card-text>
     </v-card>
   </div>

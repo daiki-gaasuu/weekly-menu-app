@@ -11,6 +11,9 @@
         <v-btn class="mx-4" icon :to="{ name: 'Cart' }">
           <v-icon size="24px">mdi-cart</v-icon>
         </v-btn>
+        <v-btn class="mx-4" icon :to="{ name: 'PastMenu' }">
+          <v-icon size="24px">mdi-notebook-outline</v-icon>
+        </v-btn>
       </v-card-text>
     </v-card>
   </v-footer>

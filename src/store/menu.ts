@@ -29,6 +29,11 @@ class MenuModule extends VuexModule implements IMenuModule {
     this._pastMenus.push(menu);
   }
 
+  @Mutation
+  public changePastMenus(menus: Menu[]) {
+    this._pastMenus = menus;
+  }
+
   public get weeklyMenus() {
     return this._weeklyMenus;
   }

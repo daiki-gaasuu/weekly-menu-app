@@ -8,7 +8,7 @@
             <ValidationProvider class="form-field" name="食材名" rules="required" v-slot="{ valid }">
               <v-text-field autocomplete="off" v-model="name" label="食材名" required :success="valid" />
             </ValidationProvider>
-            <v-btn class="info" id="submit" type="submit" :disabled="invalid">追加</v-btn>
+            <v-btn class="success" id="submit" type="submit" :disabled="invalid">追加</v-btn>
           </v-form>
         </ValidationObserver>
 

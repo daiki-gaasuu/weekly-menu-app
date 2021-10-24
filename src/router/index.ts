@@ -9,6 +9,11 @@ const routes: Array<RouteConfig> = [
     component: () => import("../views/Menu.vue"),
   },
   {
+    path: "/past-menus",
+    name: "PastMenu",
+    component: () => import("../views/PastMenu.vue"),
+  },
+  {
     path: "/fridge",
     name: "Fridge",
     component: () => import("../views/Fridge.vue"),

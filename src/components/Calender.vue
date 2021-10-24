@@ -64,7 +64,6 @@ export default class Calender extends Vue {
       return { date: date, menus: [], name: "" };
     });
     MenuModule.changeWeeklyMenus(addObjectDates);
-    console.log(this.weeklyMenus);
   }
 
   private weeklyReset() {
