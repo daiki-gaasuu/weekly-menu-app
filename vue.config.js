@@ -1,6 +1,5 @@
 module.exports = {
   transpileDependencies: ["vuetify", "vuex-persist"],
   outputDir: "docs",
-  assetsDir: "./",
-  publicPath: "./",
+  publicPath: "/weekly-menu-app",
 };
