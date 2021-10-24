@@ -7,7 +7,7 @@
           <ValidationObserver v-slot="{ handleSubmit, invalid }">
             <v-form
               class="edit-form d-flex align-center justify-space-between"
-              @submit.prevent="handleSubmit(submit(dateIndex))"
+              @submit.prevent="handleSubmit(submit(dateIndex, date.name))"
             >
               <ValidationProvider class="form-field" name="料理名" rules="required" v-slot="{ valid }">
                 <div class="text-center">
@@ -16,7 +16,7 @@
                       <v-text-field
                         autocomplete="off"
                         v-bind="attrs"
-                        v-model="form.name"
+                        v-model="date.name"
                         id="menu"
                         label="料理名"
                         required
@@ -112,7 +112,8 @@ export default class MenuList extends Vue {
     MenuModule.changeWeeklyMenus(this.weeklyMenus);
   }
 
-  private submit(index: number) {
+  private submit(index: number, name: string) {
+    this.form.name = name;
     this.weeklyMenus[index].menus?.push(this.form);
     this.resetForm();
   }
